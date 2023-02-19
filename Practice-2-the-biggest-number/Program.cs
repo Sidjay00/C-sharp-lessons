@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
+
+int number;
+
+number = new Random().Next(10, 100); // С помощью этой функции в number записывается случайное число. % 100 - означает, что все числа с остатком от деления на сто будут выводится в рандом.
+
+int a = number % 10;
+int b = number / 10;
+
+if (a > b)
+    Console.WriteLine($"{number} -> {a}");
+else
+    Console.WriteLine($"{number} -> {b}");
