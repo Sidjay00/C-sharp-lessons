@@ -20,5 +20,6 @@ double Xdist = Math.Pow(A[0] - B[0], 2);
 double Ydist = Math.Pow(A[1] - B[1], 2);
 
 double ans = Math.Sqrt(Xdist + Ydist);
+ans = Math.Round(ans, 3);
 
 System.Console.WriteLine($"A({A[0]};{A[1]}) B({B[0]};{B[1]}) -> {ans}");
