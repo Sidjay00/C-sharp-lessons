@@ -6,7 +6,8 @@ int N;
 Console.Write($"Введите число: ");
 int.TryParse(Console.ReadLine(), out N);
 
+Console.Write($"{N} -> ");
 for (int i = 1; i <= N; i++)
 {
-    Console.Write($"{i * i} ");
+    Console.Write($"{i * i}, ");
 }
