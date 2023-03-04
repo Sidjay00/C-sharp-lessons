@@ -16,10 +16,6 @@ double.TryParse(Console.ReadLine(), out B[0]);
 Console.Write($"Введите координату y точки B: ");
 double.TryParse(Console.ReadLine(), out B[1]);
 
-double Xdist = Math.Pow(A[0] - B[0], 2);
-double Ydist = Math.Pow(A[1] - B[1], 2);
-
-double ans = Math.Sqrt(Xdist + Ydist);
-ans = Math.Round(ans, 3);
+double ans = Math.Round(Math.Sqrt(Math.Pow(A[0] - B[0], 2) + Math.Pow(A[1] - B[1], 2)), 3);
 
 System.Console.WriteLine($"A({A[0]};{A[1]}) B({B[0]};{B[1]}) -> {ans}");
