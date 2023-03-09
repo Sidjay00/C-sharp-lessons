@@ -21,11 +21,16 @@ for (int i = 0; i < array.Length; i++)
 
 System.Console.WriteLine($"pos sum = {pos}\nneg sum = {neg}");
 
+double[] array2 = new double[12];
+Print(array2);
 
-void Print(int[] arr)
+// void Print(int[] arr)
+// Переделываем метод Print() через системный класс Array
+void Print(Array arr)   // Это у нас класс Array в C#, системный класс, на котором работают массивы. Грубо говоря это и есть массив. Только от этого массива строятся другие массивы. Не важно, какого размера, типа данных и пр.
 {
     for (int i = 0; i < arr.Length; i++)
-        System.Console.Write($"{arr[i]} ");
+//        System.Console.Write($"{arr[i]} "); - заменяем эту строку на правильную, т.к. в системном классе значение массива задается методом .GetValue()
+        System.Console.Write($"{arr.GetValue(i)} ");
     System.Console.WriteLine();
 }
 
