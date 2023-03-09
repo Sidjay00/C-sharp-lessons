@@ -8,10 +8,18 @@
 int[] array = FillArray(12, -9, 10);
 Print(array);
 
+int pos = 0;
+int neg = 0;
 
+for (int i = 0; i < array.Length; i++)
+{
+    if (array[i] > 0)
+        pos += array[i];
+    else
+        neg += array[i];
+}
 
-
-
+System.Console.WriteLine($"pos sum = {pos}\nneg sum = {neg}");
 
 
 void Print(int[] arr)
