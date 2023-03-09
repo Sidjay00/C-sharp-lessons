@@ -8,15 +8,24 @@
 int[] array = FillArray(12, -9, 10);
 
 Console.WriteLine($"{String.Join(", ", array)}");
-// InverseElements(array); - специальная ошибка, допущенная на практике
-Console.WriteLine($"{String.Join(", ", InverseElements(array))}");
+InverseElements(array);
+// Console.WriteLine($"{String.Join(", ", InverseElements(array))}"); - специальная ошибка, допущенная на практике
+Console.WriteLine($"{String.Join(", ", array)}");
 
 
-int[] InverseElements(int[] arr)
+// int[] InverseElements(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//         arr[i] *= -1;
+//     return arr;
+// }
+
+// Данный метод для ссылочных типов данных можно записать через void
+
+void InverseElements(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
         arr[i] *= -1;
-    return arr;
 }
 
 int[] FillArray(int size, int min = 0, int max = 10)
