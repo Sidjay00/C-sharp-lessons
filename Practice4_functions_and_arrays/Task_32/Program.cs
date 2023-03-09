@@ -3,15 +3,12 @@
 
 [-4.-8.8.2] -> [4.8.-8.-2] */
 
-
-
 int[] array = FillArray(12, -9, 10);
 
 Console.WriteLine($"{String.Join(", ", array)}");
 InverseElements(array);
-// Console.WriteLine($"{String.Join(", ", InverseElements(array))}"); - специальная ошибка, допущенная на практике
+// Console.WriteLine($"{String.Join(", ", InverseElements(array))}"); - специальная ошибка, допущенная на практике, функция вызывается второй раз
 Console.WriteLine($"{String.Join(", ", array)}");
-
 
 // int[] InverseElements(int[] arr)
 // {
