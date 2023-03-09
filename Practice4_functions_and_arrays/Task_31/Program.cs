@@ -14,13 +14,23 @@ Print(array);
 int pos = 0;
 int neg = 0;
 
-for (int i = 0; i < array.Length; i++)
+// foreach отличается от for. Здесь мы создаем итератор. Итератор - это указатель на элементы массива, грубо говоря. Мы сразу же говорим про сам элемент. Он быстрее, т.к. он просто проходит от самого начала и до самого конца.
+
+foreach (int item in array)
 {
-    if (array[i] > 0)
-        pos += array[i];
+    if (item > 0)
+        pos += item;
     else
-        neg += array[i];
+        neg += item;
 }
+
+// for (int i = 0; i < array.Length; i++) - это просто какой-то цикл, который перебирает значения от какого-то до какого-то, практически как while
+// {
+//     if (array[i] > 0)
+//         pos += array[i];
+//     else
+//         neg += array[i];
+// }
 
 System.Console.WriteLine($"pos sum = {pos}\nneg sum = {neg}");
 
