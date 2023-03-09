@@ -39,7 +39,7 @@ int neg = 0;
 
 foreach (int item in array)
 {
-    pos += item > 0 ? item : 0;
+    pos += item > 0 ? item : 0; // здесь мы можем указывать действие, и он его примет.
     neg += item < 0 ? item : 0;
 }
 
