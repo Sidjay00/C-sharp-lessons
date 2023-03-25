@@ -1,2 +1,71 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿/* **Задача 55: **  Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. 
+В случае, если это невозможно, программа должны вывести сообщение для пользователя.
+Например, задан массив:
+1 4 7 2 
+5 9 2 3
+8 4 2 4
+5 2 6 7
+
+1 5 8 5
+4 9 4 2
+7 2 2 6
+2 3 4 7 */
+
+//  Списки обращаются к динамической памяти. Есть тэг и что-то второе они хранятся в разных частях памяти.
+
+//  Как создается список
+List<int> arr = new List<int>();    // Так как используем динамический список, размер мы задать не может, поэтому пишем List интов. Такой строкой задаем список. Разница: прежде чем обращаться, 
+//например к пятому элементу, то выскочит ошибка. Выделяем с помощью .Add
+arr.Add(5);
+arr.Insert(0, 3);
+arr.Insert(1, 8);    // .Add добавляет элемент в конец списка. Добавляя элемент, мы увеличиваем размер списка.
+arr.Add(10);
+int[] array2 = new int[] { 1, 2, 3, 4, 5 };
+arr.AddRange(array2);   // Добавляем в список несколько элементов через массив.
+
+// bool flag = arr.Remove(5);
+int flag = arr.RemoveAll(i => i == 5);  //Удаление нескольких одинаковых элементов с использованием предикатов
+
+foreach (int item in arr)
+    System.Console.Write($"{item} ");
+
+if (flag > 0)
+    System.Console.WriteLine($"\nУдалили {flag} элементов");
+else
+    System.Console.WriteLine($"\nНе удалили");
+    //Почему любят листы: Могут менять размер, увеличиваться или уменьшаться. И для них прописано куча методов.
+
+
+
+// List<List<int>> array = new List<List<int>>();
+
+// for (int i = 0; i < array.Count; i++)
+// {
+//     array.Add(new List<int>());
+//     for (int j = 0; j < array[i].Count; j++)
+//     {
+//         array[i][j].Add(Random().Next(10));
+//         Console.Write($"{array[i][j]} ");
+//     }
+//     System.Console.WriteLine();
+// }
+
+// int LastRow = array.Count - 1;
+
+// // for (int i = 0; i < array[0].Count; i++)    // Размер нужно брать внутреннего массива, поэтому мы обращаемся к нулю, а потом к каунт.
+// //     (array[0][i], array[LastRow][i]) = (array[LastRow][i], array[0][i]);    // пишем не через запятую, а в разных скобках
+
+// // так как это списки, мы можем обратиться ко всему массиву в строке, вместо того, чтобы брать каждый элемент, мы сразу можем взять всю строку
+
+// (array[0], array[LastRow]) = (array[LastRow], array[0]);
+
+
+// System.Console.WriteLine();
+// for (int i = 0; i < array.Count; i++)
+// {
+//     for (int j = 0; j < array[i].Count; j++)
+//     {
+//         System.Console.Write($"{array[i][j]} ");
+//     }
+//     System.Console.WriteLine();
+// }
