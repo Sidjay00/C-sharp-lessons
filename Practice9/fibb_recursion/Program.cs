@@ -8,7 +8,7 @@ int.TryParse(Console.ReadLine(), out m);
 
 // Console.WriteLine($"M = {m}; N = {n} -> {PrintNumbers(m, n)}");
 
-//  это прямая рекурсия
+//  это прямая рекурсия - когда в ретюрне следующее значение
 // string PrintNumbers(int m, int n)
 // {
 //     if (m >= n)
@@ -18,7 +18,7 @@ int.TryParse(Console.ReadLine(), out m);
 
 Console.WriteLine(Fibb(m));
 
-//  а вот это обратная рекурсия
+//  а вот это обратная рекурсия - когда следующее зависит от предыдущего
 int Fibb(int item)
 {
     if (item < 0)
