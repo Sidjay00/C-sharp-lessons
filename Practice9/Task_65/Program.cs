@@ -10,8 +10,9 @@ int.TryParse(Console.ReadLine(), out m);
 Console.Write($"Введите число N: ");
 int.TryParse(Console.ReadLine(), out n);
 
-Console.WriteLine($"M = {m}; N = {n} -> {PrintNumbers(n)}");
+Console.WriteLine($"M = {m}; N = {n} -> {PrintNumbers(m, n)}");
 
+//  это прямая рекурсия
 string PrintNumbers(int m, int n)
 {
     if (m >= n)
