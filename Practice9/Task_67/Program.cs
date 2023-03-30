@@ -8,7 +8,7 @@ int m;
 Console.Write($"Введите число M: ");
 int.TryParse(Console.ReadLine(), out m);
 
-Console.WriteLine(DigitsSum(m));
+Console.WriteLine($"{m} -> {DigitsSum(m)}");
 
 int DigitsSum(int item)
 {
